@@ -1,0 +1,15 @@
+public static void main(String[] args) {
+        System.out.print(binary(19));
+       
+    }
+    public static String binary(int N){
+        String s;
+        s=" ";
+        while(N>0){
+            s=N%2 + s;
+            N=N/2;
+            
+        }
+        return s;
+        
+    }
