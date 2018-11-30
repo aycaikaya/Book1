@@ -1,0 +1,25 @@
+public static void main(String[] args) {
+        boolean array1[][]=null;
+        print_shape(array1);
+    }
+    public static void print_shape(boolean array[][]){
+        int row=4;
+        int column=4;
+        boolean[][] array1 = new boolean[row][column];//declaring a boolean 7x7 array
+        java.util.Arrays.fill(array1[0], true);//first row is true
+        java.util.Arrays.fill(array1[1], false);//second row is false
+        java.util.Arrays.fill(array1[2], true);//third row is true
+        java.util.Arrays.fill(array1[3], false);//fourth row is false
+        for(int r=0;r<array1.length;r++){//take variables at every row one by one
+            for(int c=0;c<array1[r].length;c++){//according to above take variables at every column one by one
+                if(array1[r][c]==true){//true means +
+                    System.out.print("+");
+                }
+                else if(array1[r][c]==false){//false means space
+                    System.out.print(" ");
+                }
+                
+            }
+        System.out.println("");//space between the the rows               
+        }
+    }
