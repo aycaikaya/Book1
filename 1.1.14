@@ -1,0 +1,12 @@
+public static void main(String[] args) {
+        System.out.println(lg(15));
+        
+    }
+    private static int lg(int N){
+        int counter=1;
+        while(N>2){
+            N=N/2;
+            counter++;
+        }
+        return counter-1;
+    }
