@@ -1,0 +1,40 @@
+package point2d;
+
+import java.util.ArrayList;
+import static java.util.Collections.min;
+
+public class Point2D {
+    private double x;
+    private double y;
+    public Point2D(double x, double y){
+        this.x=x;
+        this.y=y;
+    }
+    public double findDistance(Point2D that){
+        double xDistance=this.x-that.x;
+        double yDistance=this.y-that.y;
+        return Math.sqrt(xDistance*xDistance+yDistance*yDistance);
+    }
+    
+
+   
+    public static void main(String[] args) {
+        int N=10;
+        ArrayList<Point2D> pointList=new ArrayList<>();//creating an arraylist that will hold the points
+        ArrayList<Double> distanceList=new ArrayList<>();//creating arrayList that will hold the distances
+        for(int i=0;i<=10;i++){//it hast have 10 points 
+            Point2D point2d=new Point2D(Math.random(),Math.random());//creating the point
+            pointList.add(point2d);//adding the new point into the list
+        }
+        for(int i=0;i<=N;i++){
+            Point2D point2d=pointList.get(i);
+            for(int j=i+1;j<=N;j++){
+                double dist=point2d.findDistance(pointList.get(j));
+                distanceList.add(dist);
+            }
+        }
+        System.out.println(min(distanceList));
+       
+    }
+    
+}
