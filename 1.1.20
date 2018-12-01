@@ -1,0 +1,14 @@
+public static void main(String[] args){
+        double e;
+        e=2.718281828459045;
+        double b=ln(5);
+        double h=Math.log(b);
+        System.out.println(h);
+    }
+    public static int ln(int N){
+        if(N==0){
+            return 1;      
+        }else{
+           return N*(ln(N-1));
+        }
+    }
